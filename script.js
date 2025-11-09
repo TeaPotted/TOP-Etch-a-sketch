@@ -23,7 +23,13 @@ function createGrid(num) {
             
             // change the square's background-color and outline when hovered over
             square.addEventListener("mouseenter", () => {
-                square.style.backgroundColor = "lime";
+                // create random amounts for red, blue and green 
+                const r = generateRandomInteger(0, 255);
+                const g = generateRandomInteger(0, 255);
+                const b = generateRandomInteger(0, 255);
+                
+                // set the square's background color to a random color
+                square.style.backgroundColor = `rgb(${[r, g, b].join(",")})`;
             })
             
             // append squares to row

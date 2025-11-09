@@ -1,4 +1,5 @@
 const container = document.querySelector(".gridContainer");
+const btn = document.querySelector("button");
 
 // Make a 16x16 grid
 createGrid(16);
@@ -47,3 +48,14 @@ function validInt (userInput) {
     // if user enters a valid input return true
     return true;
 }
+
+btn.addEventListener("click", function clear(e) {
+    // number of square will be the users input
+    let gridSquares = prompt("Enter a number from 1 - 100");
+    
+    if (validInt(gridSquares)) {
+        // remove the current grid and create a new one
+        container.textContent = "";
+        createGrid(gridSquares);
+    }
+})

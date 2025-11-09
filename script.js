@@ -24,7 +24,6 @@ function createGrid(num) {
             // change the square's background-color and outline when hovered over
             square.addEventListener("mouseenter", () => {
                 square.style.backgroundColor = "lime";
-                square.style.outline = "0.1px solid darkgreen";
             })
             
             // append squares to row

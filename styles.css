@@ -10,3 +10,19 @@ body {
     display: flex;
     flex-wrap:wrap;
 }
+
+button {
+    font-size: 1.1em;
+    padding: 10px;
+    margin-bottom: 13px;
+    cursor: pointer;
+    background-color:rgb(0, 139, 97);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgba(0, 139, 97, 0.712);
+}

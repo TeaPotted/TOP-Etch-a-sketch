@@ -34,3 +34,16 @@ function createGrid(num) {
         container.appendChild(row);
     }
 }
+
+function validInt (userInput) {
+    // repeat loop if userInput is not a valid integer 
+    while (isNaN(userInput) || userInput < 1 || userInput > 100 ||
+            userInput === "") {
+        // exit prompt if cancel button is clicked
+        if (userInput === null) return false;
+
+        userInput = prompt("Only enter a valid number thats 1 - 100");
+    }
+    // if user enters a valid input return true
+    return true;
+}

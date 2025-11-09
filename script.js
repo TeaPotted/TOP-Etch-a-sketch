@@ -36,6 +36,11 @@ function createGrid(num) {
     }
 }
 
+function generateRandomInteger(min, max) {
+    // returns a number from min to max
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
 function validInt (userInput) {
     // repeat loop if userInput is not a valid integer 
     while (isNaN(userInput) || userInput < 1 || userInput > 100 ||

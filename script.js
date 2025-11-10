@@ -20,6 +20,7 @@ function createGrid(num) {
             square.style.width = `${squareSize}px`;
             square.style.height = `${squareSize}px`
             square.style.outline = "0.1px solid darkslategray";
+            square.style.opacity = "10%";
             
             // change the square's background-color and outline when hovered over
             square.addEventListener("mouseenter", () => {
@@ -30,6 +31,8 @@ function createGrid(num) {
                 
                 // set the square's background color to a random color
                 square.style.backgroundColor = `rgb(${[r, g, b].join(",")})`;
+                // make square's opacity darker
+                square.style.opacity = (parseFloat(square.style.opacity) || 0) + 0.1;
             })
             
             // append squares to row
